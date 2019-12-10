@@ -7,6 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Document</title>
 </head>
 <style>
@@ -49,6 +59,10 @@
         width: 100%;
         margin-bottom: 25px;
     }
+    #new-friend img {
+        width: 150px;
+        height: 175px;
+    }
 
     @media only screen and (max-width: 350px) {
         .jumbotron .display-4 {
@@ -84,7 +98,7 @@
         <div class="card-body">
             <h5 class="card-title">Question 1</h5>
             <p class="card-text">Your mind is always buzzing with unexplored ideas and plans.</p>
-            <select class="form-control" id="question1">
+            <select class="form-control" id="q1">
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -98,7 +112,7 @@
         <div class="card-body">
             <h5 class="card-title">Question 2</h5>
             <p class="card-text">Generally speaking, you rely more on your experience than your imagination.</p>
-            <select class="form-control" id="question1">
+            <select class="form-control" id="q2">
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -112,7 +126,7 @@
         <div class="card-body">
             <h5 class="card-title">Question 3</h5>
             <p class="card-text">You find it easy to stay relaxed and focused even when there is some pressure.</p>
-            <select class="form-control" id="question1">
+            <select class="form-control" id="q3">
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -126,7 +140,7 @@
         <div class="card-body">
             <h5 class="card-title">Question 4</h5>
             <p class="card-text">You rarely do something just out of sheer curiosity.</p>
-            <select class="form-control" id="question1">
+            <select class="form-control" id="q4">
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -140,7 +154,7 @@
         <div class="card-body">
             <h5 class="card-title">Question 5</h5>
             <p class="card-text">People can rarely upset you.</p>
-            <select class="form-control" id="question1">
+            <select class="form-control" id="q5">
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -154,13 +168,13 @@
         <div class="card-body">
             <h5 class="card-title">Question 6</h5>
             <p class="card-text">It is often difficult for you to relate to other people’s feelings.</p>
-            <select class="form-control" id="question1">
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
-                </select>
+            <select class="form-control" id="q6">
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
         </div>
     </div>
     <hr>
@@ -168,13 +182,13 @@
         <div class="card-body">
             <h5 class="card-title">Question 7</h5>
             <p class="card-text">In a discussion, truth should be more important than people’s sensitivities.</p>
-            <select class="form-control" id="question1">
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
-                </select>
+            <select class="form-control" id="q7">
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
         </div>
     </div>
     <hr>
@@ -182,13 +196,13 @@
         <div class="card-body">
             <h5 class="card-title">Question 8</h5>
             <p class="card-text">SYou rarely get carried away by fantasies and ideas.</p>
-            <select class="form-control" id="question1">
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
-                </select>
+            <select class="form-control" id="q8">
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
         </div>
     </div>
     <hr>
@@ -197,13 +211,13 @@
             <h5 class="card-title">Question 9</h5>
             <p class="card-text">You think that everyone’s views should be respected regardless of whether they are
                 supported by facts or not.</p>
-                <select class="form-control" id="question1">
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>
+            <select class="form-control" id="q9">
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
         </div>
     </div>
     <hr>
@@ -211,20 +225,24 @@
         <div class="card-body">
             <h5 class="card-title">Question 10</h5>
             <p class="card-text">You feel more energetic after spending time with a group of people.</p>
-            <select class="form-control" id="question1">
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
-                </select>
+            <select class="form-control" id="q10">
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
         </div>
     </div>
 
     <button class="btn btn-primary submit-button" type="submit" style="margin: 5px; margin-top: 10px">Submit</button>
 
     <hr>
-
+    <div class="card">
+        <div class="card-body" id= "new-friend">
+            
+        </div>
+    </div>
 
     <p> <a href="/api/friends"> API Friends List</a>
         |
@@ -233,17 +251,43 @@
 
 
 
+    <script type="text/javascript">
+
+        $(".submit-button").on("click", function (event) {
+            event.preventDefault();
+            getUserData();
+        })
+        function getUserData() {
+
+            var userData = {
+                name: $("#nameInput").val().trim(),
+                photo: $("#photoInput").val().trim(),
+                scores: [
+                    $("#q1").val().trim(),
+                    $("#q2").val().trim(),
+                    $("#q3").val().trim(),
+                    $("#q4").val().trim(),
+                    $("#q5").val().trim(),
+                    $("#q6").val().trim(),
+                    $("#q7").val().trim(),
+                    $("#q8").val().trim(),
+                    $("#q9").val().trim(),
+                    $("#q10").val().trim()
+                ]
+            }
+            console.log(userData)
+
+            var currentURL = window.location.origin
+
+            $.post(currentURL + "/api/friends", userData, function (data) {
+            })
+        }
+
+    </script>
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+
+
 </body>
 
 </html>
