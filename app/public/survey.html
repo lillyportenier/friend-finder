@@ -252,14 +252,11 @@
 
 
     <script type="text/javascript">
-
+    var newUser = {};
         $(".submit-button").on("click", function (event) {
             event.preventDefault();
-            getUserData();
-        })
-        function getUserData() {
 
-            var userData = {
+            var newUser = {
                 name: $("#nameInput").val().trim(),
                 photo: $("#photoInput").val().trim(),
                 scores: [
@@ -274,15 +271,17 @@
                     $("#q9").val().trim(),
                     $("#q10").val().trim()
                 ]
-            }
-            console.log(userData)
+            };
+            console.log(newUser);
 
-            var currentURL = window.location.origin
+            var currentURL = window.location.origin;
 
-            $.post(currentURL + "/api/friends", userData, function (data) {
+            $.post(currentURL + "/api/friends", newUser, function (data) {
+                console.log("you did it")
             })
-        }
-
+            $("#nameInput").val("");
+            $("#photoInput").val("");
+        })
     </script>
 
 
