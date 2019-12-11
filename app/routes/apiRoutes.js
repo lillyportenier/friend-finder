@@ -18,9 +18,9 @@ module.exports = function (app) {
 
         // console.log(userData);
         for (i = 0; i < userData.length; i++) {
-            console.log(newUser[i], "NU");
+            // console.log(newUser[i], "NU");
 
-            console.log(newUserScores[i]);
+            // console.log(newUserScores[i]);
             var diff = 0;
 
             for (k = 0; k < newUserScores.length; k++) {
@@ -30,15 +30,20 @@ module.exports = function (app) {
         }
         console.log(friendDiffArray, "dif afay");
        
-        for (i = 0; friendDiffArray.length > i; i++) {
-            if (friendDiffArray[i] < max) {
-                max = friendDiffArray[i];
-                bestfriendNumber = [i]
-                console.log(bestfriendNumber)
-            }
-        }
-        var bestfriendName = userData[bestfriendNumber];
+        // for (i = 0; friendDiffArray.length > i; i++) {
+
+            var bestFriend = Math.min(friendDiffArray)
+            // if (friendDiffArray[i] < max) {
+            //     // max = friendDiffArray[i];
+            //     bestfriendNumber = [i]
+            //     console.log(bestfriendNumber , "BFF NUMBER")
+            // }
+        // }
+        console.log(bestFriend, "BFF")
+        // var bestfriendName = userData[bestfriendNumber];
         
         // res.json(bestfriendName);
+
+        // still need to get the best freiend function to only take the data with the lowest diffrence, then send this to the the survey.html page
     })
 }
