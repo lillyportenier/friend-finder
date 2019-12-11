@@ -12,11 +12,13 @@ module.exports = function (app) {
         var newUserScores = req.body.scores
         var newUser = req.body;
         var friendDiffArray = [];
+        var max = Infinity;
+        var bestfriendNumber;
         // console.log(newUser);
 
         // console.log(userData);
         for (i = 0; i < userData.length; i++) {
-            console.log(newUser[i],"NU");
+            console.log(newUser[i], "NU");
 
             console.log(newUserScores[i]);
             var diff = 0;
@@ -27,6 +29,16 @@ module.exports = function (app) {
             friendDiffArray.push(diff);
         }
         console.log(friendDiffArray, "dif afay");
+       
+        for (i = 0; friendDiffArray.length > i; i++) {
+            if (friendDiffArray[i] < max) {
+                max = friendDiffArray[i];
+                bestfriendNumber = [i]
+                console.log(bestfriendNumber)
+            }
+        }
+        var bestfriendName = userData[bestfriendNumber];
         
+        // res.json(bestfriendName);
     })
 }
